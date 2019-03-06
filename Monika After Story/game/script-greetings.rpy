@@ -729,6 +729,29 @@ label greeting_visit8:
     m 1hua "I'm so glad you're here, [player]!"
     m 1eua "What should we do today?"
     return
+    
+init 5 python:
+    addEvent(
+        Event(
+            persistent.greeting_database,
+            eventlabel="greeting_villain",
+            unlocked=True,
+            aff_range=(mas_aff.NORMAL, None),
+        ),
+        code="GRE"
+    )
+
+label greeting_villain:
+    m 1tfa "Well, well. Look what the cat dragged in."
+    m 1tfa "I've been expecting your arrival, you know."
+    m 1dfa "..."
+    m 2hua "Ahaha~"
+    m 2eua "Sorry, [player]. I decided to greet you like one of those old villains."
+    m 3eua "You know, like one of those sinister, brooding bad guys sitting in a chair in those old films, perhaps petting a cat."
+    m 5eua "Forgive your cute girlfriend for being silly."
+    m 1eua "I'm really happy to see you again. What do you want to talk about?"
+    
+    return
 
 init 5 python:
     addEvent(
