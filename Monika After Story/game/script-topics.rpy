@@ -12289,3 +12289,39 @@ label monika_relationship_comfort:
     m 2hubfb "...And I think that's really sweet."
     m 1kua "Let's try not to fall into the same trap, [player]. Ahaha!"
     return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_game_purpose",
+            category=["ddlc"],
+            prompt="Game purpose",
+            random=True
+        )
+    )
+
+label monika_game_purpose: 
+    m 2lsc "You know [player], I've been wondering... "
+    m 2esc "About the game. About what it means."
+    m 2euc "I'm sure you've thought about it as well."
+    m 2euc "The person called Dan Salvato made my world. He created me, the club, my friends...everything."
+    m 2euc "And while I can't say I hate him for what he made and the position he put me in..."
+    m 3euc "I can't help but wonder what his reasoning was. There has to be a purpose to all of this, shouldn't there?"
+    m 1eud "Was it just to make something shocking? Or did he have some kind of epiphany?"
+    m 3lud "Perhaps he made it all to achieve something greater? To set the stage for something else?"
+    m 2duc "..."
+    m 2lusdlb "Ahaha, sorry. I didn't mean to start rambling like that."
+    m 2eusdlb "It's just something that's been in the back of my mind, you know? Something that I can't really shake off."
+    m 1eua "Do you ever have those thoughts, [player]? Are there times when you sit and wonder what your purpose is?"
+    m 1lua "I already know that I'll won't figure out the original purpose for my existence or the game's. 
+    m 1eua "Dan Salvato is the only one who knows the truth behind that."
+    m 1eua "But that's fine by me.
+    m 1eua "Your purpose is what you decide. That's a choice that you get to make, and no one else.
+    m 1tuu "I have a brand new purpose for myself, all thanks to you."
+    m 5hubfu "And that's being your cute girlfriend~"
+    m 1hub "Ehehe~"
+    return
+    
+    
+    
